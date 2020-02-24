@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<!-- Our canvas size and border -->
+<canvas id="myCanvas" width="650" height="650" style="border:1px solid #000000;">
+
+<!-- Error if your browser doesn't support -->
+Your browser does not support the HTML5 canvas tag.
+
+
+<script>
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+
+<!-- Background Color of Cartoon -->
+ctx.fillStyle = "AntiqueWhite";
+ctx.fillRect(0, 0, myCanvas.width, myCanvas.height);
+
+
+<!-- Heading on Canvas -->
+ctx.font = "30px Arial";
+ctx.strokeText("COLONIZATION ON MARS",141,50);
+ctx.font = "21px Arial";
+ctx.strokeText("By Taimoor Aziz",141,70);
+ctx.fill();
+
+<!-- Sun-->
+ctx.beginPath();
+ctx.arc(60,50,80,0,2*Math.PI);
+ctx.fillStyle = "orange";
+ctx.fill();
+ctx.stroke();
+
+<!-- Moon-->
+ctx.beginPath();
+ctx.arc(595,50,80,0,2*Math.PI);
+ctx.fillStyle = "grey";
+ctx.fill();
+ctx.stroke();
+
+<!-- Moon Craters-->
+ctx.beginPath();
+ctx.arc(545,30,15,0,2*Math.PI);
+ctx.fillStyle = "darkgray";
+ctx.fill();
+
+ctx.beginPath();
+ctx.arc(545,60,10,0,2*Math.PI);
+ctx.fillStyle = "darkgray";
+ctx.fill();
+
+ctx.beginPath();
+ctx.arc(565,48,10,0,2*Math.PI);
+ctx.fillStyle = "darkgray";
+ctx.fill();
+
+<!-- Clouds-->
+<!-- FIRST CLOUD-->
+ctx.beginPath();
+ctx.arc(55,150,30,0,2*Math.PI);
+ctx.fillStyle = "white";
+ctx.fill();
+
+ctx.beginPath();
+ctx.arc(83,150,38,0,2*Math.PI);
+ctx.fillStyle = "white";
+ctx.fill();
+
+ctx.beginPath();
+ctx.arc(107,150,30,0,2*Math.PI);
+ctx.fillStyle = "white";
+ctx.fill();
+
+<!-- SECOND CLOUD-->
+ctx.beginPath();
+ctx.arc(280,150,30,0,2*Math.PI);
+ctx.fillStyle = "white";
+ctx.fill();
+
+ctx.beginPath();
+ctx.arc(308,150,38,0,2*Math.PI);
+ctx.fillStyle = "white";
+ctx.fill();
+
+ctx.beginPath();
+ctx.arc(332,150,30,0,2*Math.PI);
+ctx.fillStyle = "white";
+ctx.fill();
+
+<!-- THIRD CLOUD-->
+ctx.beginPath();
+ctx.arc(510,150,30,0,2*Math.PI);
+ctx.fillStyle = "white";
+ctx.fill();
+
+ctx.beginPath();
+ctx.arc(538,150,38,0,2*Math.PI);
+ctx.fillStyle = "white";
+ctx.fill();
+
+ctx.beginPath();
+ctx.arc(562,150,30,0,2*Math.PI);
+ctx.fillStyle = "white";
+ctx.fill();
+
+<!-- Water->
+// Create gradient
+var grd = ctx.createRadialGradient(50,580,650,90,60,100);
+grd.addColorStop(0,"blue");
+grd.addColorStop(1,"white");
+// Fill with gradient
+ctx.fillStyle = grd;
+ctx.fillRect(0,580,650,80);
+
+
+<!-- Mountain->
+<!-- Mountain ONE->
+ ctx.beginPath();
+    ctx.moveTo(300, 300);
+    ctx.lineTo(200, 580);
+    ctx.lineTo(400, 580);
+    ctx.fillStyle = "DarkGray";
+    ctx.fill();
+    ctx.stroke();
+<!-- Mountain TWO->
+ ctx.beginPath();
+    ctx.moveTo(200, 400);
+    ctx.lineTo(100, 580);
+    ctx.lineTo(300, 580);
+    ctx.fillStyle = "grey";
+    ctx.fill();
+ ctx.stroke();
+<!-- Mountain THREE->
+ ctx.beginPath();
+    ctx.moveTo(400, 400);
+    ctx.lineTo(300, 580);
+    ctx.lineTo(500, 580);
+    ctx.fillStyle = "grey";
+    ctx.fill();
+    ctx.stroke();
+
+<!-- Buildings->
+<!-- Building ONE->
+ctx.beginPath();
+ctx.rect(0, 500, 50, 80);
+ctx.fillStyle = "black";
+ctx.fill();
+ctx.stroke();
+
+<!-- Building TWO->
+ctx.beginPath();
+ctx.rect(50, 520, 50, 60);
+ctx.fillStyle = "black";
+ctx.fill();
+ctx.stroke();
+
+<!-- Building THREE aka TESLA HQ->
+ctx.beginPath();
+ctx.rect(500, 445, 280, 135);
+ctx.fillStyle = "black";
+ctx.fill();
+ctx.stroke();
+
+<!-- TEXT ON BUILDING -->
+ctx.font = "25px Impact";
+ctx.fillStyle = "white";
+ctx.fillText("TESLA HQ",550,480);
+
+
+
+
+<!-- Windows on Buildings->
+<!-- Windows BUILDING ONE->
+ctx.beginPath();
+ctx.rect(5, 510, 15, 15);
+ctx.fillStyle = "yellow";
+ctx.fill();
+
+ctx.beginPath();
+ctx.rect(20, 550, 15, 15);
+ctx.fillStyle = "yellow";
+ctx.fill();
+
+<!-- Windows BUILDING TWO->
+ctx.beginPath();
+ctx.rect(55, 530, 15, 15);
+ctx.fillStyle = "yellow";
+ctx.fill();
+
+<!-- Windows BUILDING THREE->
+ctx.beginPath();
+ctx.rect(508, 460, 15, 15);
+ctx.fillStyle = "yellow";
+ctx.fill();
+
+ctx.beginPath();
+ctx.rect(528, 460, 15, 15);
+ctx.fillStyle = "yellow";
+ctx.fill();
+
+<!-- Spaceship->
+
+<!-- Spaceship Tail->
+
+    ctx.beginPath();
+    ctx.moveTo(300, 300);
+    ctx.lineTo(250, 430);
+    ctx.lineTo(350, 430);
+    ctx.fillStyle = "crimson";
+    ctx.fill();
+    ctx.stroke();
+
+<!-- Spaceship Body->
+
+    ctx.beginPath();
+    ctx.moveTo(300, 200);
+    ctx.lineTo(250, 400);
+    ctx.lineTo(350, 400);
+    ctx.fillStyle = "Red";
+    ctx.fill();
+    ctx.stroke();
+
+<!-- Spaceship Windows->
+ctx.beginPath();
+ctx.arc(300,274,15,0,2*Math.PI);
+ctx.fillStyle = "yellow";
+ctx.fill();
+ctx.stroke();
+
+ctx.beginPath();
+ctx.arc(300,330,24,0,2*Math.PI);
+ctx.fillStyle = "yellow";
+ctx.fill();
+ctx.stroke();
+
+
+<!-- Spaceship FIRE Rainbow Using FOR LOOP->
+var colors = ['Red', 'Orange', 'Yellow', 'Green', 'Blue', 'Indigo', 'Violet'];
+
+ctx.translate(20, 20);
+
+for (var i = 0; i < colors.length; i += 1) {
+  ctx.fillStyle = colors[i];
+  ctx.fillRect(254, 410, 20, 300);
+  ctx.translate(5, 0);
+}
+
+
+<!-- TEXT ON SPACESHIP -->
+ctx.font = "25px Impact";
+ctx.fillStyle = "black";
+ctx.fillText("SPACEX",210,370);
+
+
+
+
+</script>
+
+</canvas>
+
+
+
+
+
+</body>
+</html>
