@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p id="demo"></p>
+<canvas id="myCanvas" style="width: 600px;height: 600px"></canvas>
+<script>
+
+
+    var myObj, i, j, x = "";
+    myObj = {
+
+        "fruit": [
+            {"name":"APPLE", "quantity":"20","color":"red"},
+            {"name":"ORANGE", "quantity":"10","color":"orange"},
+            {"name":"BANANA", "quantity":"15","color":"yellow" },
+            {"name":"KIWI", "quantity":"3","color":"green"},
+            {"name":"BLUEBERRY", "quantity":"5","color":"blue"},
+            {"name":"GRAPES", "quantity":"8","color":"purple"}
+        ]
+    }
+
+ 
+    for (i in myObj.fruit) {
+    }
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    ctx.font = "9px Arial";
+    
+    <!--BACKGROUND COLOR-->
+    ctx.beginPath();
+    ctx.rect(0, 0, 600, 600);
+    ctx.fill(); 
+    
+    <!--APPLE-->
+    ctx.fillStyle = myObj.fruit[0].color;
+    ctx.fillRect(0, 100, 30, (myObj.fruit[0].quantity)*5);
+    ctx.fillText(myObj.fruit[0].name, 1, 40);
+    ctx.fillText(myObj.fruit[0].quantity, 10, 50);
+
+    <!--ORANGE-->
+    ctx.fillStyle = myObj.fruit[1].color;
+    ctx.fillRect(50, 125,30,  (myObj.fruit[1].quantity)*5);
+    ctx.fillText(myObj.fruit[1].name, 50, 40);
+    ctx.fillText(myObj.fruit[1].quantity, 55, 50);
+
+    <!--BANANA-->
+    ctx.fillStyle = myObj.fruit[2].color;
+    ctx.fillRect(100, 115,30,  (myObj.fruit[2].quantity)*5);
+    ctx.fillText(myObj.fruit[2].name, 100, 40);
+    ctx.fillText(myObj.fruit[2].quantity, 110, 50);
+
+    <!--KIWI-->
+    ctx.fillStyle = myObj.fruit[3].color;
+    ctx.fillRect(150, 140,30,  (myObj.fruit[3].quantity)*5);
+    ctx.fillText(myObj.fruit[3].name, 150, 40);
+    ctx.fillText(myObj.fruit[3].quantity, 158, 50);
+
+    <!--BLUEBERRY-->
+    ctx.fillStyle = myObj.fruit[4].color;
+    ctx.fillRect(200, 135,30,  (myObj.fruit[4].quantity)*5);
+    ctx.fillText(myObj.fruit[4].name, 185, 40);
+    ctx.fillText(myObj.fruit[4].quantity, 205, 50);
+
+    <!--GRAPES-->
+    ctx.fillStyle = myObj.fruit[5].color;
+    ctx.fillRect(250, 130,30,  (myObj.fruit[5].quantity)*5);
+    ctx.fillText(myObj.fruit[5].name, 250, 40);
+    ctx.fillText(myObj.fruit[5].quantity, 265, 50);
+
+    //ctx.fillStyle = myObj.fruit[5].color;
+    //ctx.fillRect(0,200 , (myObj.fruit[5].quantity)*10,40);
+
+    document.getElementById("demo").innerHTML = x;
+
+</script>
+
+</body>
+</html>
